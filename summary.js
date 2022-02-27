@@ -31,8 +31,8 @@ console.log(templeStr);
 // ৩.১. শূন্য প্যারামিটার ওয়ালা একটা অ্যারো ফাংশন লিখবে যেটা ৮৯ রিটার্ন করবে। 
 
 const arguments = [99, 89, 333];
-const arr = () => arguments[1];
-console.log(arr());
+const zeroParam = () => arguments[1];
+console.log(zeroParam());
 
 // ৩.২. এক প্যারামিটার ওয়ালা একটা অ্যারো ফাংশন ডিক্লেয়ার করবে। এই ফাংশনের কাজ হবে যে প্যারামিটার নিবে সেটাকে ৭ দিয়ে ভাগ করে ভাগফল রিটার্ন করবে। 
 
@@ -54,3 +54,24 @@ const multiPlus = (num1, num2) => {
     return equalValue;
 }
 console.log(multiPlus(22, 24));
+
+// ৪. অনেকগুলা সংখ্যার একটা array হবে। তারপর তোমার কাজ হবে array এর উপরে map ইউজ করে। প্রত্যেকটা উপাদানকে ৭ দিয়ে ভাগ করে ভাগফল আরেকটা array হিসেবে রাখবে। পুরা কাজটা এক লাইনে হবে। 
+
+const arr = [21, 45, 67, 89, 12, 34, 56, 78, 99]
+const arrMap = arr.map(n => (n / 7).toFixed(2));
+console.log(arrMap);
+
+
+// ৫. জাভাস্ক্রিপ্ট এ array এর map, forEach, filter, find কোনটা দিয়ে কি হয়। সেটার একটা সামারি লিখে ফেলো। 
+// 1.
+// map()= The map()method creates a new array with the results of calling a provided function on every element in the calling array
+// 2. 
+// find () = The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+// 3. 
+// filter () = ফিল্টার সেইম ম্যাপের মতোই কিন্তু এখানে অ্যাপ্লাইকৃত ফাংশন যদি trueরিটার্ণ করে তাহলেই সেটা নতুন অ্যারেতে স্থান পাবে, নতুবা যদি ফাংশন falseরিটার্ণ করে তাহলে সেই আইটেম অ্যারেতে স্থান পাবে না।
+
+// ৬. সিম্পল একটা জাভাস্ক্রিপ্ট অবজেক্ট এর কোন একটা প্রোপার্টিকে ভেরিয়েবল হিসেবে ডিক্লেয়ার করার জন্য destructuring ইউজ করো। array এর destructuring করবে আর সেটা করার জন্য তুমি এরে এর সেকেন্ড পজিশন এর উপাদান কে destructuring করে 'balance' নামক একটা ভেরিয়েবল এ রাখবে।
+
+const accoutInfo = ['SaJeeb Ahmed', 50000, 'student']
+const [name, balance, profession] = accoutInfo;
+console.log(balance);
