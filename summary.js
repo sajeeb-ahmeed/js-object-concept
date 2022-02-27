@@ -27,3 +27,9 @@ const templeStr = `
  Favourite Number = ${fida.favNumber[1]}
 `
 console.log(templeStr);
+
+// ৩.১. শূন্য প্যারামিটার ওয়ালা একটা অ্যারো ফাংশন লিখবে যেটা ৮৯ রিটার্ন করবে। 
+
+const arguments = [99, 89, 333];
+const arr = () => arguments[1];
+console.log(arr());
